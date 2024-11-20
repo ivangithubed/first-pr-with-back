@@ -175,8 +175,8 @@
                 const data = await response.json();
                 
                 if (response.ok) {
-                    alert('Вхід успішний!');
-                    closeModal('loginModal');
+                    localStorage.setItem('userEmail', email);
+                    window.location.href = '/dashboard.html';
                 } else {
                     alert(data.message || 'Помилка входу');
                 }
